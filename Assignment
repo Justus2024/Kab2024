@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP Assignment</title>
+</head>
+<body>
+<?php
+$myname = "Muhizi Justus";
+$myDOB = "2001-7-22";
+$myhomeaddress = "Kigali, Rwanda";
+$myCurrentAge = CurrentAge($myDOB);
+
+function CurrentAge($myDOB){
+$myDOB = new DateTime($myDOB);
+$today = new DateTime('today');
+$age = $myDOB->diff($today)->y;
+return $age;
+}
+
+echo "Welcome to " .$myhomeaddress . " " .$myname ." your" .$mycurrentAge ."years old";
+
+?>
+
+</body>
+</html>
